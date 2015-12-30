@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* CSS Document */
+#background
+{
+	position: relative;
+	min-height:768px;
+	max-height:auto;
+	margin:auto;
+	min-width:1454px;
+	background-image:url(images/bg.png);
+	z-index: -2;
+}
+
+#body
+{
+	position: absolute;
+	top: 510px;
+	left: 30px;
+	min-height:768px;
+	max-height:auto;	
+	margin:auto;
+	min-width:800px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	width:800px;
+	Text-shadow: black 0.1em 0.1em 0.2em;
+	padding-top: 50px;
+	padding-left:120px;
+	line-height:150%;
+	z-index: 3;
+}
+
+#body h1
+{
+	padding-bottom: 10px;
+}
+#Table_01
+{
+	margin-left:350px;
+	align:center;
+}
+
+#gallerywrapper
+{
+	min-width:1454px;
+	height:300px;
+	background-color:#2A3622;
+}
+
+#stripe
+{
+	height: 12px;
+	min-width:1454px;
+	background-image:url(newbanner/images/stripe.gif);
+}
+
+#logo
+{
+	height: 118px;
+	width: auto;
+}
+
+#headerlogo
+{
+	position: absolute;
+	height:  auto;
+	top:  38px;
+	left: 100px;
+	
+}
+
+#header
+{
+	min-width:1454px;
+	height:178px;
+	background-image:url(newbanner/images/bannernew-bg.gif)
+}
+
+#textcontainer
+{
+	position: absolute;
+	z-index: -1;
+	top: 550px;
+	left: 120px;
+}
+
+#footer
+{
+	bottom: 0px;
+	left: 50%;
+	position: fixed;
+	margin-left: -627px;
+	min-width: 1254px;
+	background-color: #093;
+	text-align: center;
+	font-family:"font-family: Arial, Helvetica, sans-serif";
+	font-size: 16px;
+	color: white;
+	Text-shadow: black 0.1em 0.1em 0.2em;
+	z-index: 20;
+}
+
+#textchange
+{
+	position: absolute;
+	height: 250px;
+	width: 344px;
+	background-image:url(images/textchangebg.png);
+	left: 1115px;
+	top: 675px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	Text-shadow: black 0.1em 0.1em 0.2em;
+	line-height:150%;
+}
+
+#textchange p, #textchange h1
+{
+	margin-left: 25px;
+	margin-top: 25px;
+	width: 300px;
+}
+
+#textchange p
+{
+	font-size:18px;
+}

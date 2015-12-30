@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Test</title>
+<script type="text/javascript" src="../../Documents/Javascript/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+
+global_arg = new Array(); // Creates global variable to retain input
+global_arg.length = 0;
+function changeThis(arg)
+{
+	
+	changeText = new Array();
+	
+	if (global_arg.length != 0) // Only runs if the global variable already received input
+	{
+		changeText.length = global_arg.length;
+		for (i=0; i<global_arg.length; i++)
+		{
+			changeText[i] = global_arg[i];
+		}
+	 
+	}
+	
+	if (arguments.length != 0)
+	{
+		changeText.length = arguments.length;
+		global_arg.length = arguments.length;
+		for (i=0; i<(arguments.length); i++)
+		{
+			global_arg[i] = arguments[i];
+			changeText[i] = global_arg[i];
+		}
+	}
+	
+	
+	x=changeText.length;
+	for (i=0; i< x; i++)
+		 (function(i) {
+    		setTimeout(function() 
+			{
+			jQuery("#example").fadeIn(1000);
+			document.getElementById("example").innerHTML = changeText[i];
+			setTimeout(function(){jQuery("#example").fadeOut(1000);},3000);
+			}, i * 5000);
+	})(i);
+	
+	setTimeout("changeThis()", i*5000);
+}
+
+</script>
+	
+<style type="text/css">
+#test
+{
+	height: 300px;
+	width: 300px;
+	background-color:#000;
+	text-align: center;
+	color: white;
+	position:fixed;
+}
+</style>
+</head>
+
+<body onload="changeThis('Hello','Hi','Yo')">
+<div id="test">
+<p id="example">
+Original Sentence
+</p>
+</div>
+
+</body>
+</html>
